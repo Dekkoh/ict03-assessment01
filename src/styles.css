@@ -12,6 +12,37 @@ body {
   box-shadow: 1px 1px 5px black;
 }
 
+.menu-mobile {
+  height: 52px;
+}
+
+.side-menu-btn {
+  display: none;
+  margin: 10px 8px 10px 0px;
+}
+
+.side-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  min-width: 100px;
+  padding: 0px 8px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.side-menu a {
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .logo {
   max-width: 40px;
 }
@@ -45,7 +76,7 @@ body {
   padding: 0px 8px;
   display: flex;
   align-items: center;
-  height: 60px;
+  height: 52px;
 }
 
 .navigation a:hover {
@@ -77,6 +108,22 @@ body {
   margin: 8px;
 }
 
-.dropdown:hover .dropdown-content {
+.nav-dropdown-desktop:hover .dropdown-content {
   display: block;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-dropdown-desktop {
+    display: none;
+  }
+  .nav-btn-desktop {
+    display: none;
+  }
+  .side-menu-btn {
+    display: block;
+  }
+}
+
+[hidden]{
+  display: none;
 }
