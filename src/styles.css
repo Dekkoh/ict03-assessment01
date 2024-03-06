@@ -57,7 +57,7 @@ body {
   max-width: 40px;
 }
 
-.divider {
+.nav-divider {
   height: 32px;
   margin: 0px 8px;
 }
@@ -134,4 +134,49 @@ body {
   .side-menu-btn {
     display: block;
   }
+}
+
+.body-container {
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0px 0px 8px;
+}
+
+.route-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.route-slash {
+  color: #62D2A2;
+}
+
+.route-text {
+  width: 56px;
+}
+
+.route-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.route-title {
+  width: 160px;
+}
+
+.divider {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -4px;
+}
+
+.divider-line {
+  width: 74px;
+}
+
+.divider-leaf {
+  width: 12px;
 }
