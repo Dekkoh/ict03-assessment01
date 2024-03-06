@@ -7,6 +7,9 @@
   <title>Tea+</title>
   <link rel="icon" href="assets/logo.svg" />
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script>
     $(function () {
@@ -19,10 +22,11 @@
   <div id="nav-bar"></div>
   <main class="body-container">
     <div class="route-container">
-      <img src="assets/products.svg" alt="products" class="route-text">
-      <div class="route-slash">/</div>
+      <p class="route-text">Products/</p>
     </div>
-    <div class="route-title-container"><img src="assets/premium-tea.svg" alt="premium-tea" class="route-title"></div>
+    <div>
+      <p class="route-title">Premium Tea</p>
+    </div>
     <div class="divider">
       <img src="assets/horizontal-line.svg" alt="horizontal-line" class="divider-line">
       <img src="assets/leaf.svg" alt="leaf" class="divider-leaf">
@@ -32,3 +36,12 @@
 </body>
 
 </html>
+
+<script>
+  $(document).ready(function() {
+    console.log($(".route-title").width())
+    $(".divider-line").css({
+      'width': (($(".route-title").width() - 12) / 2 + 'px')
+    });
+  });
+</script>
