@@ -70,9 +70,9 @@
     const isCollapsed = sideMenu.height() === 0;
 
     if (isCollapsed) {
-      sideMenu.animate({ 'max-height': '100%' })
+      sideMenu.animate({ 'max-height': '100%' }, { duration: 250 })
     } else {
-      sideMenu.animate({ 'max-height': '0px' })
+      sideMenu.animate({ 'max-height': '0px' }, { duration: 250 })
     }
   });
 
@@ -81,9 +81,9 @@
     const isCollapsed = subMenu.height() === 0;
 
     if (isCollapsed) {
-      subMenu.animate({ 'max-height': '120px' })
+      subMenu.animate({ 'max-height': '120px' }, { duration: 250 })
     } else {
-      subMenu.animate({ 'max-height': '0px' })
+      subMenu.animate({ 'max-height': '0px' }, { duration: 250 })
     }
   });
 
@@ -92,9 +92,9 @@
     const isCollapsed = subMenu.height() === 0;
 
     if (isCollapsed) {
-      subMenu.animate({ 'max-height': '120px' })
+      subMenu.animate({ 'max-height': '120px' }, { duration: 250 })
     } else {
-      subMenu.animate({ 'max-height': '0px' })
+      subMenu.animate({ 'max-height': '0px' }, { duration: 250 })
     }
   });
 </script>

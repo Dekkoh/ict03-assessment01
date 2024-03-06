@@ -25,8 +25,7 @@ body {
   max-height: 0px;
   overflow: hidden;
   position: absolute;
-  display: flex;
-  flex-direction: column;
+  display: block;
   background-color: #f9f9f9;
   padding: 0px 8px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -91,7 +90,7 @@ body {
 }
 
 .navigation a:hover {
-  background-color: #f1f1f1;
+  background-color: #D9D9D9;
 }
 
 .nav-text {
