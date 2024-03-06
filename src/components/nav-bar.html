@@ -1,12 +1,28 @@
 <header class="header">
-  <div class="menu-mobile" id="foo">
+  <div class="menu-mobile">
     <img src="assets/menu.svg" alt="side-menu-btn" class="side-menu-btn">
     <div class="side-menu" id="side-menu" hidden>
-      <a><img src="assets/products.svg" alt="products" class="nav-text" /><img src="assets/triangle.svg"
+      <a><img src="assets/products.svg" alt="products" class="nav-text" id="products" /><img src="assets/triangle.svg"
           alt="products-arrow" class="nav-triangle" /></a>
+      <div class="sub-side-menu" id="sub-side-menu-products" hidden>
+        <a href="organic-coffee.html"><img src="assets/line.svg" alt="line" class="sub-menu-line"><img
+            src="assets/organic-coffee.svg" alt="organic-coffee" class="nav-text" /></a>
+        <a href="premium-tea.html"><img src="assets/line.svg" alt="line" class="sub-menu-line"><img
+            src="assets/premium-tea.svg" alt="premium-tea" class="nav-text" /></a>
+        <a href="fancy-cookies.html"><img src="assets/line.svg" alt="line" class="sub-menu-line"><img
+            src="assets/fancy-cookies.svg" alt="fancy-cookies" class="nav-text" /></a>
+      </div>
       <a href="services.html"><img src="assets/services.svg" alt="services" class="nav-text" /></a>
-      <a><img src="assets/about-us.svg" alt="about-us" class="nav-text" /><img
-          src="assets/triangle.svg" alt="about-us-arrow" class="nav-triangle" /></a>
+      <a><img src="assets/about-us.svg" alt="about-us" class="nav-text" id="about-us"  /><img src="assets/triangle.svg"
+          alt="about-us-arrow" class="nav-triangle" /></a>
+      <div class="sub-side-menu" id="sub-side-menu-about-us" hidden>
+        <a href="about-our-company.html"><img src="assets/line.svg" alt="line" class="sub-menu-line"><img
+            src="assets/about-our-company.svg" alt="about-our-company" class="nav-text" /></a>
+        <a href="management-team.html"><img src="assets/line.svg" alt="line" class="sub-menu-line"><img
+            src="assets/management-team.svg" alt="management-team" class="nav-text" /></a>
+        <a href="careers.html"><img src="assets/line.svg" alt="line" class="sub-menu-line"><img
+            src="assets/careers.svg" alt="careers" class="nav-text" /></a>
+      </div>
       <a href="contact-us.html"><img src="assets/contact-us.svg" alt="contact-us" class="nav-text" /></a>
     </div>
   </div>
@@ -49,8 +65,20 @@
 </header>
 
 <script>
-  $(".menu-mobile").on("click", function () {
+  $(".side-menu-btn").on("click", function () {
     const sideMenu = document.getElementById('side-menu');
+    sideMenu.hidden = !sideMenu.hidden;
+  });
+
+  $("#products").on("click", function () {
+    document.getElementById('sub-side-menu-about-us').hidden = true;
+    const sideMenu = document.getElementById('sub-side-menu-products');
+    sideMenu.hidden = !sideMenu.hidden;
+  });
+
+  $("#about-us").on("click", function () {
+    document.getElementById('sub-side-menu-products').hidden = true;
+    const sideMenu = document.getElementById('sub-side-menu-about-us');
     sideMenu.hidden = !sideMenu.hidden;
   });
 </script>

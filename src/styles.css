@@ -38,6 +38,11 @@ body {
   height: 40px;
 }
 
+.sub-menu-line {
+  height: 40px;
+  width: 16px;
+}
+
 .logo-container {
   display: flex;
   align-items: center;
